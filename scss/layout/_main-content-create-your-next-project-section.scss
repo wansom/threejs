@@ -1,0 +1,55 @@
+// ******************************************************
+//    MAIN CONTENT - CREATE YOUR NEXT PROJECT SECTION
+// ******************************************************
+
+.create-your-next-project-section {
+  @include flexbox($wrap: wrap);
+  width: 80%;
+
+  // Section - Wrapper
+  &-wrapper {
+    @include flexbox($wrap: wrap);
+    width: 100%;
+    margin: 50px auto;
+  }
+
+  // Section - Title
+  &__title {
+    @extend .your-choice-section__title;
+    width: 100%;
+    margin-bottom: 35px;
+    span {
+      color: $title-span-color;
+    }
+
+    @media screen and (min-width: 1100px) {
+      font-size: 3.6rem;
+    }
+  }
+
+  // Section - CTA Button
+  &__cta-btn {
+    @include general-button;
+    box-shadow: -5px 5px 15px #f2984a49;
+    transition: background-color 0.5s;
+    z-index: 1000;
+
+    &:hover {
+      background-color: darken($btn-bg-color, 20%);
+      cursor: pointer;
+    }
+    &:active {
+      background-color: lighten($btn-bg-color, 10%);
+    }
+  }
+
+  // Section - Illustration
+  &__illustration {
+    width: 120vw;
+    transform: translateY(-30px);
+
+    @media screen and (min-width: 1100px) {
+      width: 100vw;
+    }
+  }
+}

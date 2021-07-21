@@ -1,0 +1,97 @@
+// **************************************************
+//    MAIN CONTENT - INCREASE YOUR TRAFFIC SECTION
+// **************************************************
+
+.increase-your-traffic-section {
+  @include flexbox($wrap: wrap);
+  margin-bottom: 75px;
+  width: 80%;
+
+  @media screen and (min-width: 768px) {
+    width: 45%;
+    max-width: 370px;
+    margin-left: auto;
+    margin-right: 25px;
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 1100px) {
+    max-width: 450px;
+  }
+
+  // Section - Wrapper
+  &-wrapper {
+    width: 100%;
+    @include flexbox($wrap: wrap);
+    margin: 10px auto 40px auto;
+    background-image: url(../assets/patterns/pattern-6.svg);
+    background-repeat: no-repeat;
+    background-position: -30vw center;
+
+    @media screen and (min-width: 1100px) {
+      margin: 100px auto;
+      background-position: left center;
+    }
+  }
+
+  // Section - Title
+  &__title {
+    @extend .your-choice-section__title;
+    width: 100%;
+
+    span {
+      color: $title-span-color;
+    }
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      width: 90%;
+    }
+
+    @media screen and (min-width: 1100px) {
+      font-size: 4rem;
+    }
+  }
+
+  // Section - Description
+  &__description {
+    @extend .your-choice-section__description;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+      margin-bottom: 30px;
+      font-size: 1.4rem;
+    }
+
+    @media screen and (min-width: 1100px) {
+      width: 85%;
+    }
+  }
+
+  // Section - Button
+  &__btn {
+    @include general-button;
+    box-shadow: -5px 5px 15px #f2984a42;
+    transition: background-color 0.5s;
+
+    &:hover {
+      background-color: darken($btn-bg-color, 20%);
+      cursor: pointer;
+    }
+    &:active {
+      background-color: lighten($btn-bg-color, 10%);
+    }
+  }
+
+  // Section - Graphic
+  &__graphic {
+    width: 80%;
+
+    @media screen and (min-width: 768px) {
+      width: 40%;
+      max-width: 420px;
+      margin-right: auto;
+    }
+  }
+}

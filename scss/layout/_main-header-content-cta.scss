@@ -1,0 +1,54 @@
+// *************************************************
+//       MAIN HEADER CONTENT - CTA
+// *************************************************
+
+.main-header-content .cta-section {
+  @include flexbox($direction: column, $justify: space-evenly, $align: left);
+  margin-top: 60px;
+  height: 130px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 70%;
+    margin-top: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  @media screen and (min-width: 1300px) {
+    max-width: 260px;
+  }
+
+  // Button
+  &__btn {
+    @include general-button;
+    transition: background-color 0.5s;
+
+    @media screen and (min-width: 768px) {
+      width: 120px;
+    }
+
+    &:nth-child(1) {
+      &:hover {
+        background-color: darken($btn-bg-color, 20%);
+        cursor: pointer;
+      }
+      &:active {
+        background-color: lighten($btn-bg-color, 10%);
+      }
+    }
+    &:nth-child(2) {
+      @include ghost-button;
+      transition: border-color 0.5s;
+
+      &:hover {
+        border-color: darken($btn-bg-color, 20%);
+        cursor: pointer;
+      }
+      &:active {
+        border-color: lighten($btn-bg-color, 10%);
+      }
+    }
+  }
+}

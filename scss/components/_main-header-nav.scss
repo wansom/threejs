@@ -1,0 +1,80 @@
+// ************************************
+//          MAIN HEADER NAV
+// ************************************
+
+.top-section-nav {
+  margin: auto;
+  list-style-type: none;
+
+  @media screen and (min-width: 768px) {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-wrapper {
+    background: #040d3e;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    font-family: $third-font-family;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    transition: all 0.5s;
+    transform: translateX(-110%);
+
+    @media screen and (min-width: 850px) {
+      margin: 0 auto 0 50px;
+    }
+    @media screen and (min-width: 768px) {
+      background: transparent;
+      position: static;
+      transform: none;
+      display: block;
+      width: 55%;
+      height: fit-content;
+      max-width: 340px;
+      justify-self: flex-start;
+      margin: 0 auto 0 20px;
+    }
+  }
+
+  &__link {
+    font-size: 2rem;
+    display: block;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color 0.5s;
+    &:hover {
+      color: $title-color;
+    }
+    &:active {
+      color: $btn-bg-color;
+    }
+    @media screen and (min-width: 768px) {
+      text-decoration: none;
+      color: $text-color-2;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      transition: color 0.5s;
+      font: {
+        size: 1.4rem;
+        weight: 400;
+      }
+      &:hover {
+        color: #fff;
+      }
+      &:active {
+        color: $btn-bg-color;
+      }
+    }
+  }
+}
+
+.open {
+  transform: none;
+}

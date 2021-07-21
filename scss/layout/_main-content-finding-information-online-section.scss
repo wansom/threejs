@@ -1,0 +1,124 @@
+// ******************************************************
+//    MAIN CONTENT - FINDING INFORMATION SECTION
+// ******************************************************
+
+.finding-information-section {
+  width: 80%;
+  @include flexbox($wrap: wrap);
+  margin-bottom: 50px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1100px) {
+    max-width: 995px;
+  }
+
+  // Section - Wrapper
+  &-wrapper {
+    width: 100%;
+    @include flexbox($wrap: wrap);
+    margin: 50px auto;
+    background-image: url(../assets/patterns/pattern-7.svg);
+    background-repeat: no-repeat;
+    background-position: 40vw center;
+    background-size: contain;
+
+    @media screen and (min-width: 768px) {
+      background-position: 70vw center;
+    }
+    @media screen and (min-width: 1100px) {
+      margin: 200px auto;
+      background-position: 75vw center;
+    }
+  }
+
+  // Section - Title
+  &__title {
+    @extend .your-choice-section__title;
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+    span {
+      color: $title-span-color;
+    }
+
+    @media screen and (min-width: 1100px) {
+      font-size: 4rem;
+    }
+  }
+  // Section - description
+  &__description {
+    @extend .your-choice-section__description;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 0;
+
+    @media screen and (min-width: 1100px) {
+      max-width: 500px;
+      margin: 0 auto 0 auto;
+      font-size: 1.6rem;
+    }
+  }
+
+  // Section - Image
+  &__img {
+    width: 100%;
+    margin-top: 50px;
+
+    @media screen and (min-width: 768px) {
+      order: 0;
+      width: 50%;
+    }
+  }
+}
+
+// --------  Articles -----------
+.finding-information-articles-wrapper {
+  @include flexbox($wrap: wrap);
+  margin-top: 30px;
+  width: 80%;
+
+  @media screen and (min-width: 768px) {
+    width: 45%;
+    order: 1;
+  }
+
+  .finding-information-article {
+    @include flexbox($justify: flex-start, $wrap: wrap);
+
+    // Article - Title
+    &__title {
+      @extend .your-choice-section__title;
+      font-size: 1.6rem;
+      text-align: left;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+    // Article - Description
+    &__description {
+      @extend .your-choice-section__description;
+      text-align: left;
+      margin-bottom: 0;
+      width: 100%;
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+    &:nth-child(1) {
+      margin-bottom: 30px;
+
+      &::before {
+        content: url(../assets/icons/Swiss-knife.svg);
+        margin-bottom: 10px;
+      }
+    }
+    &:nth-child(2)::before {
+      content: url(../assets/icons/Possible.svg);
+      margin-bottom: 10px;
+    }
+  }
+}

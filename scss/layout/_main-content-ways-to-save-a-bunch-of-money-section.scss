@@ -1,0 +1,107 @@
+// ******************************************************
+//       MAIN CONTENT - WAYS TO SAVE MONEY SECTION
+// ******************************************************
+
+// Section - Wrapper
+.ways-to-save-money-wrapper {
+  @include flexbox($wrap: wrap);
+  width: 100%;
+  margin: 50px auto;
+  background-image: url(../assets/patterns/pattern-6.svg);
+  background-repeat: no-repeat;
+  background-position: -40vw center;
+
+  @media screen and (min-width: 1100px) {
+    margin: 100px auto;
+  }
+}
+
+// Section
+.ways-to-save-money-section {
+  @include flexbox($wrap: wrap);
+  width: 80%;
+
+  @media screen and (min-width: 768px) {
+    max-width: 700px;
+  }
+
+  @media screen and (min-width: 1100px) {
+    max-width: 995px;
+  }
+
+  // Section - title
+  &__title {
+    @extend .your-choice-section__title;
+    width: 100%;
+
+    span {
+      color: $title-span-color;
+    }
+
+    @media screen and (min-width: 1100px) {
+      max-width: 70%;
+    }
+  }
+
+  // Section -  Description
+  &__description {
+    @extend .your-choice-section__description;
+    width: 100%;
+
+    @media screen and (min-width: 1100px) {
+      width: 45%;
+    }
+  }
+}
+
+// Articles
+.ways-to-save-money-articles-wrapper {
+  @extend .your-choice-articles-wrapper;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1100px) {
+    width: 90%;
+  }
+
+  // Article
+  .ways-to-save-money-article {
+    @include flexbox($justify: flex-end, $wrap: wrap);
+    margin-bottom: 35px;
+
+    @media screen and (min-width: 768px) {
+      width: 30%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    @media screen and (min-width: 1100px) {
+      max-width: 250px;
+    }
+
+    // Article - Title
+    &__title {
+      @extend .your-choice-section__title;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 10px;
+      width: 100%;
+      display: inline-block;
+    }
+    
+    // Article - Description
+    &__description {
+      @extend .your-choice-section__description;
+      text-align: center;
+      width: 100%;
+      margin-bottom: 0;
+
+      @media screen and (min-width: 768px) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

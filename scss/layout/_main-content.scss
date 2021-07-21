@@ -1,0 +1,7 @@
+// *******************************
+//         MAIN CONTENT
+// *******************************
+.main-content {
+  @include flexbox($wrap: wrap);
+  width: 100%;
+}

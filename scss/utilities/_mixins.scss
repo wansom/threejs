@@ -1,0 +1,33 @@
+// ************ Mixins **************
+
+// Flexbox
+@mixin flexbox(
+  $direction: row,
+  $wrap: nowrap,
+  $justify: center,
+  $align: center
+) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+// Buttons
+@mixin general-button($width:100px, $pdy:10px, $pdx:0px) {
+  width: $width;
+  padding: $pdy $pdx;
+  color: #fff;
+  background-color: $btn-bg-color;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+@mixin ghost-button {
+  color: $btn-bg-color;
+  border: 1px solid $btn-bg-color;
+  background-color: transparent;
+}

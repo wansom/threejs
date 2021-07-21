@@ -1,0 +1,21 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+.main-wrapper {
+  @include flexbox(row, wrap);
+  background: $body-bg-gradient;
+  background-repeat: no-repeat;
+  padding: 5rem 0 10%;
+  overflow-x: hidden;
+  width: 100%;
+  
+  @media screen and (min-width: 768px) {
+    padding: 5% 0;
+  }
+}
